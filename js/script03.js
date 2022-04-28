@@ -16,3 +16,11 @@ console.log(itemList.parentElement.parentElement)
 
 // children
 console.log(itemList.children);
+console.log(itemList.children[0]);
+itemList.children[1].style.backgroundColor = 'lightgreen'
+
+// firstChild - НУ ДУЖЕ КОРИСНА
+console.log(itemList.firstChild);
+
+// firstElementChild
+console.log(itemList.firstElementChild);
