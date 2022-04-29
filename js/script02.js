@@ -1,71 +1,54 @@
-// console.log(document.getElementById('header-title'))
-const headerTitle = document.getElementById('header-title')
-const header = document.getElementById('main-header')
-console.log(headerTitle)
-console.log(headerTitle.innerHTML) //Item Lister <span style="display: none;">123</span>
-console.log(headerTitle.innerText) // Item Lister
-console.log(headerTitle.textContent) // Item Lister 123
-// headerTitle.textContent = 'Hello';
-// headerTitle.textContent = 'Goodbay';
-headerTitle.innerHTML = `<h3>Hello</he>`
-headerTitle.style.borderBottom = 'solid 3px black'
-header.style.borderBottom = 'solid 3px black'
+const itemList = document.querySelector('#items')
 
-// GET ELEMENTS BY CLASS NAME //
-const items = document.getElementsByClassName('list-group-item')
-console.log(items)
-console.log(items[1])
-items[1].textContent = 'Hello 2'
-items[1].style.fontWeight = 'bold'
-items[1].style.backgroundColor = 'yellow'
-items[2].innerHTML = 'Hello 3'
+// parentNode
+// console.log(`це є ${itemList}`)
+// console.log(itemList.parentNode)
+// itemList.parentNode.style.backgroundColor = '#f4f4f4'
+// console.log(itemList.parentNode.parentNode)
 
-// items.style.backgroundColor = '#f4f4f4' // це не працюэ
+// parentElement
+console.log(itemList.parentElement)
+itemList.parentElement.style.backgroundColor = '#f4f4f4'
+console.log(itemList.parentElement.parentElement)
 
-for (var i = 0; i < items.length; i++) {
-  items[i].style.backgroundColor = '#ccc'
-}
+// childNodes - КРАЩЕ НЕ ВИКОРИСТОВУВАТИ
+// console.log(itemList.childNodes);
 
-// GET ELEMENTS BY TAG NAME //
-const li = document.getElementsByTagName('li')
-console.log(li)
-console.log(li[2])
-console.log(li[2].textContent)
-console.log(li[2].innerText)
-console.log(li[2].innerHTML)
-li[2].style.color = 'blue'
-li[2].style.fontWeight = 'bold'
+// children
+console.log(itemList.children)
+console.log(itemList.children[0])
+itemList.children[1].style.backgroundColor = 'lightgreen'
 
-// QUERY SELECTOR
-const headerS = document.querySelector('#main-header')
-header.style.borderBottom = 'solid 4px red'
+// firstChild - НУ ДУЖЕ КОРИСНА
+console.log(itemList.firstChild)
 
-const input = document.querySelector('input')
-input.value = 'hello world'
+// firstElementChild
+console.log(itemList.firstElementChild)
 
-const submit = document.querySelector('input[type="submit"]')
-submit.value = 'Send'
+// nextSibling
+console.log(itemList.nextSibling)
 
-const item = document.querySelector('.list-group-item')
-item.style.color = 'red'
+// nextElementSibling
+console.log(itemList.nextElementSibling)
 
-const lastItem = document.querySelector('.list-group-item:last-child')
-lastItem.style.color = 'brown'
+// createElement
+const newDiv = document.createElement('div')
+// add class
+newDiv.className = 'hello'
+// add id
+newDiv.id = 'hello1'
 
-const secondItem = document.querySelector('.list-group-item:nth-child(2)')
-secondItem.style.color = 'coral'
+newDiv.setAttribute('title', 'Hello Div')
 
-// QUERY SELECTOR ALL
+// create text node
+const newDivText = document.createTextNode('Hello world!')
 
-const titles = document.querySelectorAll('.title')
-console.log(titles)
-titles[0].textContent = 'Changed title'
+// add text to div
+newDiv.appendChild(newDivText)
 
-const odd = document.querySelectorAll('li:nth-child(odd)')
-const even = document.querySelectorAll('li:nth-child(even)')
-for(var i = 0; i < odd.length; i++){
-   odd[i].style.backgroundColor = '#f4f4f4'
-   even[i].style.backgroundColor = '#e1edf7'
+const container = document.querySelector('div .card')
+const h1 = document.querySelector('div h2')
 
-}
+container.insertBefore(newDiv, h1)
 
+console.log(newDiv)
