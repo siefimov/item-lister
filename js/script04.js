@@ -35,7 +35,7 @@ function addItem (e) {
 
     document.getElementById('item').value = ''
   } else {
-    console.log(1)
+    console.log('hello')
   }
 }
 
