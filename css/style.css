@@ -111,12 +111,23 @@ button:hover {
 }
 
 .item-content {
-   border: 1px solid #344854;
+   border-top: 1px solid #344854;
+   /* border-right: 1px solid #344854; */
    padding: 10px 10px 10px 10px;
    margin: 0 10px 0px 10px;
    color: grey;
-   border-radius: 5px;
+   /* border-radius: 5px; */
 }
+.item-content:last-child {
+   border-bottom: 1px solid #344854;
+   /* border-right: 1px solid #344854; */
+   /* padding: 10px 10px 10px 10px;
+   margin: 0 10px 0px 10px;
+   color: grey; */
+   /* border-radius: 5px; */
+}
+
+
 
 .item-content span{
    color: #002d56;

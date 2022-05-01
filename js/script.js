@@ -27,7 +27,7 @@ function addItem (e) {
     const newBlock = `
     <div class="item-content"><span>${inputValue}</span>
                     <div class="button-items">
-                        <button class="checked-item">Y</button>
+                        <button class="checked-item">&#128504</button>
                         <button class="remove-item">Х</button>
                     </div>
                   </div>
