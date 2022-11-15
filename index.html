@@ -1,111 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap"
+         rel="stylesheet"
+      />
+      <link rel="stylesheet" href="./css/style.css" />
+      <title>DOM</title>
+      <style>
+         .item-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #002d56;
+         }
 
-<head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="./css/style.css">
-   <title>DOM</title>
-   <style>
-      .item-content {
-         display: flex;
-         justify-content: space-between;
-         align-items: center;
-         color: #002d56;
-      }
+         .remove-item {
+            width: 20px;
+            height: 20px;
+            padding: 5px;
+            border-radius: 50%;
+            background-color: brown;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+         }
 
-      .remove-item {
-         width: 20px;
-         height: 20px;
-         padding: 5px;
-         border-radius: 50%;
-         background-color: brown;
-         display: flex;
-         justify-content: center;
-         align-items: center;
-      }
+         .header__block {
+            display: flex;
+            justify-content: space-between;
+         }
 
-      .header__block {
-         display: flex;
-         justify-content: space-between;
-      }
+         .search__button {
+            border: 1px solid;
+         }
 
-      .search__button {
-         border: 1px solid;
-      }
+         .button-items {
+            display: flex;
+            align-items: center;
+         }
 
-      .button-items {
-         display: flex;
-         align-items: center;
-      }
+         .checked-item {
+            margin-right: 5px;
+            width: 20px;
+            height: 20px;
+            padding: 5px;
+            border-radius: 50%;
+            background-color: rgb(33, 162, 33);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+         }
+      </style>
+   </head>
 
-      .checked-item {
-         margin-right: 5px;
-         width: 20px;
-         height: 20px;
-         padding: 5px;
-         border-radius: 50%;
-         background-color: rgb(33, 162, 33);
-         display: flex;
-         justify-content: center;
-         align-items: center;
-      }
-   </style>
-</head>
-
-<body>
-   <div class="wrapper">
-      <header class="header">
-         <div class="header__container">
-            <div class="header__block">
-               <div class="header__title">Item Listener</div>
-               <div class="header__search search">
-                  <input class="search__input" placeholder="пошук.."></input>
-                  <!-- <button class="search__button button">Search</button> -->
+   <body>
+      <div class="wrapper">
+         <header class="header">
+            <div class="header__container">
+               <div class="header__block">
+                  <div class="header__title">Item Listener</div>
+                  <div class="header__search search">
+                     <input class="search__input" placeholder="пошук.." />
+                     <!-- <button class="search__button button">Search</button> -->
+                  </div>
                </div>
             </div>
-         </div>
-      </header>
-      <main class="main">
-         <div class="main__container">
-            <div class="main__wrapper">
-               <div class="container__add">
-                  <div class="add-field">
-                     <label for="" class="title">Add Items</label>
-                     <div class="add-field__block">
-                        <input type="text" class="input-value" value="">
-                        <button type="submit" id="submit">Submit</button>
+         </header>
+         <main class="main">
+            <div class="main__container">
+               <div class="main__wrapper">
+                  <div class="container__add">
+                     <div class="add-field">
+                        <label for="" class="title">Add Items</label>
+                        <div class="add-field__block">
+                           <input type="text" class="input-value" value="" />
+                           <button type="submit" id="submit">Submit</button>
+                        </div>
                      </div>
                   </div>
-               </div>
-               <div class="container__items">
-                  <div class="items-title title">Items</div>
-                  <div class="item-content">
-                     <span>Item 1</span>
-                     <div class="button-items">
-                        <button class="checked-item">&#128504</button>
-                        <button class="remove-item">Х</button>
+                  <div class="container__items">
+                     <div class="items-title title">Items</div>
+                     <div class="item-content">
+                        <span>Item 1</span>
+                        <div class="button-items">
+                           <button class="checked-item">128504</button>
+                           <button class="remove-item">Х</button>
+                        </div>
                      </div>
-                  </div>
-                  <!-- <div class="item-content">Item 2<button class="remove-item" name="name">Х</button></div>
+                     <!-- <div class="item-content">Item 2<button class="remove-item" name="name">Х</button></div>
                   <div class="item-content">Item 3<button class="remove-item" name="name">Х</button></div>
                   <div class="item-content">Item 4<button class="remove-item" name="name">Х</button></div> -->
-               </div>
-               <div class="container__done-items done-items">
-                  <div class="done-items__title title">Done</div>
-                  <div class="done-items__list">
-                     <!-- <div class="done-content">Item 1
+                  </div>
+                  <div class="container__done-items done-items">
+                     <div class="done-items__title title">Done</div>
+                     <div class="done-items__list">
+                        <!-- <div class="done-content">Item 1
                         <button class="checked-item">Y</button>
                      </div> -->
+                     </div>
                   </div>
                </div>
             </div>
-         </div>
-      </main>
-   </div>
-   <script src="./js/script.js"></script>
-</body>
-
+         </main>
+      </div>
+      <script src="./js/script.js"></script>
+   </body>
 </html>
